@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src\SgLockNET\SgLockNET.csproj" Type="C#" />
   </Folder>
 
   <Folder Name="/test/">
