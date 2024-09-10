@@ -14,6 +14,7 @@
     <File Path="LICENSE.md" />
     <File Path="Readme.md" />
     <File Path="Directory.Build.props" />
+    <File Path="Directory.build.targets" />
   </Folder>
 
   <Properties Name="Visual Studio">
