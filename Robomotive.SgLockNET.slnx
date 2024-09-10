@@ -4,6 +4,7 @@
 
   <Folder Name="/test/">
     <File Path="test\.editorconfig" />
+    <File Path="Directory.Build.props" />
   </Folder>
 
   <Folder Name="/Solution Items/">
@@ -12,6 +13,7 @@
     <File Path=".gitignore" />
     <File Path="LICENSE.md" />
     <File Path="Readme.md" />
+    <File Path="Directory.Build.props" />
   </Folder>
 
   <Properties Name="Visual Studio">
