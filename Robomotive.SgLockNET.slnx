@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/">
+  </Folder>
+
+  <Folder Name="/test/">
+    <File Path="test\.editorconfig" />
+  </Folder>
+
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="LICENSE.md" />
+    <File Path="Readme.md" />
+  </Folder>
+
+  <Properties Name="Visual Studio">
+    <Property Name="OpenWith" Value="17" />
+  </Properties>
+</Solution>
