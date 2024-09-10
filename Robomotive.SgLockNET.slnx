@@ -15,6 +15,7 @@
     <File Path="Readme.md" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.build.targets" />
+    <file Path="version.json" />
   </Folder>
 
   <Properties Name="Visual Studio">
