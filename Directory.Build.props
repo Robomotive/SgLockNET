@@ -20,7 +20,6 @@
     <Authors>Robomotive</Authors>
     <Copyright>Robomotive</Copyright>
     <Description>A .NET wrapper for the SG-Lock library.</Description>
-    <PackageId>SgLock.NET</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Robomotive/SgLockNET/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
