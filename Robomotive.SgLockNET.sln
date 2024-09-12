@@ -1,0 +1,64 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9C6578E7-E4FE-79BB-1635-F363CC1E80DD}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+		.github\release.yml = .github\release.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{E7A3C856-6834-D657-F2F0-05592DF2DDE9}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildTestDeploy.yml = .github\workflows\BuildTestDeploy.yml
+		.github\workflows\DependabotAutoMerge.yml = .github\workflows\DependabotAutoMerge.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{089100B1-113F-4E66-888A-E83F3999EAFD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.build.targets = Directory.build.targets
+		LICENSE.md = LICENSE.md
+		Readme.md = Readme.md
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0C88DD14-F956-CE84-757C-A364CCF449FC}"
+	ProjectSection(SolutionItems) = preProject
+		test\.editorconfig = test\.editorconfig
+		test\Directory.Build.props = test\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SgLockConfigurator", "src\SgLockConfigurator\SgLockConfigurator.csproj", "{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SgLockNET", "src\SgLockNET\SgLockNET.csproj", "{F6DC0143-C72C-C387-ED36-52605EA80517}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DC0143-C72C-C387-ED36-52605EA80517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DC0143-C72C-C387-ED36-52605EA80517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DC0143-C72C-C387-ED36-52605EA80517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DC0143-C72C-C387-ED36-52605EA80517}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7A3C856-6834-D657-F2F0-05592DF2DDE9} = {9C6578E7-E4FE-79BB-1635-F363CC1E80DD}
+		{F636B41D-2DDB-53AD-8BA0-BE5AD14479A0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{F6DC0143-C72C-C387-ED36-52605EA80517} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+EndGlobal
