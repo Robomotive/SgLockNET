@@ -13,7 +13,7 @@ internal partial class AuthenticateViewModel : ObservableObject
 {
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(AuthenticateCommand))]
-    private uint[] authenticationCode = [];
+    private uint[] authenticationCode = new uint[12];
 
     [RelayCommand]
     private void Authenticate()
