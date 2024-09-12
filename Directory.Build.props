@@ -11,7 +11,6 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <DocumentationFile Condition="'$(Configuration)' == 'Release'">$(OutputPath)\SgLock.NET.xml</DocumentationFile>
   </PropertyGroup>
 
   <!--Package settings-->
@@ -32,6 +31,7 @@
     <BinDir>$(RepositoryRootDirectory)bin</BinDir>
     <OutputPath>$([System.IO.Path]::GetFullPath('$(RepositoryRootDirectory)bin\$(Configuration)'))\$(MSBuildProjectName)</OutputPath>
     <BaseIntermediateOutputPath>$([System.IO.Path]::GetFullPath('$(RepositoryRootDirectory)bin\obj\$(MSBuildProjectName)'))\</BaseIntermediateOutputPath>
+    <DocumentationFile Condition="'$(Configuration)' == 'Release'">$(OutputPath)\$(MSBuildProjectName).xml</DocumentationFile>
   </PropertyGroup>
 
   <!--Microsoft.SourceLink.GitHub settings-->
