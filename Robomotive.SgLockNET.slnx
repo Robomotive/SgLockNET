@@ -20,6 +20,16 @@
     <file Path="version.json" />
   </Folder>
 
+  <Folder Name="/.github/">
+    <File Path=".github/dependabot.yml" />
+    <File Path=".github/release.yml" />
+  </Folder>
+
+  <Folder Name="/.github/workflows/">
+    <File Path=".github\workflows\BuildTestDeploy.yml" />
+    <File Path=".github\workflows\DependabotAutoMerge.yml" />
+  </Folder>
+
   <Properties Name="Visual Studio">
     <Property Name="OpenWith" Value="17" />
   </Properties>
