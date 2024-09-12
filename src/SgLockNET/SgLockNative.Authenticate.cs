@@ -23,7 +23,7 @@ internal static partial class SgLockNative
     /// </remarks>
     // public static extern UInt32 SglAuthentA([Out] UInt32[] AuhtentCode, [In, Out] UInt32[] AppRandNum ,[In] UInt32[] LibRandNum);
     [LibraryImport(LibName, EntryPoint = "SglAuthentA")]
-    public static partial ReturnCode Authenticate(uint[] authenticationCode, uint[] applicationRandomNumber, uint[] libraryRandomNumber);
+    public static partial ReturnCode Authenticate([In] uint[] authenticationCode, [In, Out] uint[] applicationRandomNumber, [In, Out] uint[] libraryRandomNumber);
 
     /// <summary>
     /// Authentication of SG-Lock library to the protected application and vice versa.
@@ -39,5 +39,5 @@ internal static partial class SgLockNative
     /// </remarks>
     // public static extern UInt32 SglAuthentB([Out] UInt32[] LibRandNum);
     [LibraryImport(LibName, EntryPoint = "SglAuthentB")]
-    public static partial ReturnCode Authenticate(uint[] libraryRandomNumber);
+    public static partial ReturnCode Authenticate([In, Out] uint[] libraryRandomNumber);
 }

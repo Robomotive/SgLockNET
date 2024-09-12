@@ -24,7 +24,7 @@ internal static partial class SgLockNative
     /// </remarks>
     // public static extern uint SglCryptLock([Out] uint ProductId, [Out] uint KeyNum, [Out] uint CryptMode, [Out] uint BlockCnt, [In] uint[] Data);
     [LibraryImport(LibName, EntryPoint = "SglCryptLock")]
-    public static partial ReturnCode CryptLock(uint productId, uint keyNumber, CipherMode cryptMode, uint blockCount, uint[] data);
+    public static partial ReturnCode CryptLock(uint productId, uint keyNumber, CipherMode cryptMode, uint blockCount, [In, Out] uint[] data);
 
     /// <summary>
     /// Writes a 128-bit key to the SG-Lock key memory.

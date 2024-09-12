@@ -20,7 +20,7 @@ internal static partial class SgLockNative
     /// <returns>A <see cref="ReturnCode"/> indicating the result.</returns>
     // public static extern uint SglReadData([Out] uint ProductId, [Out] uint Address, [Out] uint Count, [In] uint[] Data);
     [LibraryImport(LibName, EntryPoint = "SglReadData")]
-    public static partial ReturnCode ReadData(uint productId, uint address, uint count, uint[] data);
+    public static partial ReturnCode ReadData(uint productId, uint address, uint count, [In, Out] uint[] data);
 
     /// <summary>
     /// Writes 32-bit data values to SG-Lock memory.
@@ -37,5 +37,5 @@ internal static partial class SgLockNative
     /// <returns>A <see cref="ReturnCode"/> indicating the result.</returns>
     // public static extern uint SglWriteData([Out] uint ProductId, [Out] uint Address, [Out] uint Count, [In] uint[] Data);
     [LibraryImport(LibName, EntryPoint = "SglWriteData")]
-    public static partial ReturnCode WriteData(uint productId, uint address, uint count, uint[] data);
+    public static partial ReturnCode WriteData(uint productId, uint address, uint count, [In] uint[] data);
 }

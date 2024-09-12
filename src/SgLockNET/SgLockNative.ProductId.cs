@@ -8,7 +8,7 @@ internal static partial class SgLockNative
     /// <summary>
     /// Reads the 16-bit ProductId from the SG-Lock.
     /// </summary>
-    /// <param name="productIdPtr">Pointer to variable, that the ProductId assigned to</param>
+    /// <param name="productIds">Pointer to variable, that the ProductId assigned to</param>
     /// <returns>A <see cref="ReturnCode"/> indicating the result.</returns>
     /// <remarks>
     /// The ProductId is an identifier that eases to distinguish between different protected
@@ -22,7 +22,7 @@ internal static partial class SgLockNative
     /// </remarks>
     // public static extern uint SglReadProductId([In] uint[] ProductIdPtr);
     [LibraryImport(LibName, EntryPoint = "SglReadProductId")]
-    public static partial ReturnCode ReadProductId(uint[] productIdPtr);
+    public static partial ReturnCode ReadProductId([In, Out] uint[] productIds);
 
     /// <summary>
     /// Writes a new 16-bit ProductId to the SG-Lock.
