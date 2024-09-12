@@ -10,10 +10,11 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="Vectron.Library.Wpf" Version="4.0.92" />
+    <ProjectReference Include="..\SgLockNET\SgLockNET.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SgLockNET\SgLockNET.csproj" />
+    <Content Include="$(RepositoryRootDirectory)/deps/SgLock/win-x64/SG-Lock.dll" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>
