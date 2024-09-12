@@ -1,0 +1,91 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:SgLockConfigurator"
+    xmlns:vecbeh="clr-namespace:Vectron.Library.Wpf.Behaviors;assembly=Vectron.Library.Wpf"
+    xmlns:vecctr="clr-namespace:Vectron.Library.Wpf.Controls;assembly=Vectron.Library.Wpf">
+    <local:HexValueConverter x:Key="hexValueConverter" />
+
+    <DataTemplate DataType="{x:Type local:AuthenticateViewModel}">
+        <StackPanel>
+            <UniformGrid Columns="4" Rows="3">
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[00], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[01], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[02], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[03], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[04], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[05], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[06], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[07], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[08], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[09], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[10], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+
+                <local:HexNumericTextBox Text="{Binding AuthenticationCode[11], Converter={StaticResource hexValueConverter}}">
+                    <i:Interaction.Behaviors>
+                        <vecbeh:TextBoxHighlightTextOnFocus />
+                    </i:Interaction.Behaviors>
+                </local:HexNumericTextBox>
+            </UniformGrid>
+            <Button
+                MinHeight="40"
+                Command="{Binding AuthenticateCommand}"
+                Content="Authenticate" />
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

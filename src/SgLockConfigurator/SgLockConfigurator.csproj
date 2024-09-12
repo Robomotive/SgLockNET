@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetPlatformIdentifier>windows</TargetPlatformIdentifier>
+    <UseWPF>true</UseWPF>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Vectron.Library.Wpf" Version="4.0.92" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SgLockNET\SgLockNET.csproj" />
+  </ItemGroup>
+
+</Project>
