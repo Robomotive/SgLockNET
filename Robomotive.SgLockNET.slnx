@@ -1,12 +1,12 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src\SgLockNET\SgLockNET.csproj" Type="C#" />
-    <Project Path="src\SgLockConfigurator\SgLockConfigurator.csproj" Type="C#" />
+    <Project Path="src\SgLockNET\SgLockNET.csproj" />
+    <Project Path="src\SgLockConfigurator\SgLockConfigurator.csproj" />
   </Folder>
 
   <Folder Name="/test/">
     <File Path="test\.editorconfig" />
-    <File Path="Directory.Build.props" />
+    <File Path="test\Directory.Build.props" />
   </Folder>
 
   <Folder Name="/Solution Items/">
