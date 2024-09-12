@@ -16,7 +16,7 @@ public partial class SgLock
         }
 
         var data = new uint[ConfigData.MemorySize];
-        var errorCode = SgLockNative.ReadData(ProductId, 0, ConfigData.MemorySize, data);
+        var errorCode = SgLockNative.ReadData(ProductId, 0, (uint)data.Length, data);
         AssertErrorCode(errorCode);
         return data;
     }
@@ -36,7 +36,7 @@ public partial class SgLock
         return Task.Run(() =>
         {
             var data = new uint[ConfigData.MemorySize];
-            var errorCode = SgLockNative.ReadData(ProductId, 0, ConfigData.MemorySize, data);
+            var errorCode = SgLockNative.ReadData(ProductId, 0, (uint)data.Length, data);
             AssertErrorCode(errorCode);
             return data;
         });
@@ -61,7 +61,7 @@ public partial class SgLock
         ArgumentOutOfRangeException.ThrowIfGreaterThan(startAdress + length, ConfigData.MemorySize, nameof(length));
 
         var data = new uint[length];
-        var errorCode = SgLockNative.ReadData(ProductId, startAdress, ConfigData.MemorySize, data);
+        var errorCode = SgLockNative.ReadData(ProductId, startAdress, length, data);
         AssertErrorCode(errorCode);
         return data;
     }
@@ -87,7 +87,7 @@ public partial class SgLock
         return Task.Run(() =>
         {
             var data = new uint[length];
-            var errorCode = SgLockNative.ReadData(ProductId, startAdress, ConfigData.MemorySize, data);
+            var errorCode = SgLockNative.ReadData(ProductId, startAdress, (uint)data.Length, data);
             AssertErrorCode(errorCode);
             return data;
         });
