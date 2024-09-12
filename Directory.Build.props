@@ -11,6 +11,7 @@
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile Condition="'$(Configuration)' == 'Release'">$(OutputPath)\SgLock.NET.xml</DocumentationFile>
   </PropertyGroup>
 
   <!--Package settings-->
@@ -18,9 +19,12 @@
     <IsPackable>true</IsPackable>
     <Authors>Robomotive</Authors>
     <Copyright>Robomotive</Copyright>
+    <Description>A .NET wrapper for the SG-Lock library.</Description>
+    <PackageId>SgLock.NET</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Robomotive/SgLockNET/</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>sg-lock sgl sglock SgLock.NET</PackageTags>
   </PropertyGroup>
 
   <!--Settings to move the bin en output folders to the root folder-->
