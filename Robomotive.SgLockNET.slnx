@@ -25,12 +25,8 @@
     <File Path=".github/release.yml" />
   </Folder>
 
-  <Folder Name="/.github/workflows/">
+  <Folder Name="/.github/workflows/" Id="e7a3c856-6834-d657-f2f0-05592df2dde9">
     <File Path=".github\workflows\BuildTestDeploy.yml" />
     <File Path=".github\workflows\DependabotAutoMerge.yml" />
   </Folder>
-
-  <Properties Name="Visual Studio">
-    <Property Name="OpenWith" Value="17" />
-  </Properties>
 </Solution>
