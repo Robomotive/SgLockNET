@@ -9,7 +9,7 @@ namespace SgLockConfigurator;
 /// <summary>
 /// View model for displaying all keys.
 /// </summary>
-internal partial class KeysViewModel : ObservableObject
+internal sealed partial class KeysViewModel : ObservableObject
 {
     private readonly ObservableCollection<SgLock> allKeys;
 

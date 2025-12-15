@@ -9,7 +9,7 @@ namespace SgLockConfigurator;
 /// <summary>
 /// The view model for authenticating the lock.
 /// </summary>
-internal partial class AuthenticateViewModel : ObservableObject
+internal sealed partial class AuthenticateViewModel : ObservableObject
 {
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(AuthenticateCommand))]
@@ -22,7 +22,7 @@ internal partial class AuthenticateViewModel : ObservableObject
         {
             SgLock.Authenticate(AuthenticationCode);
             var message = new NavigateToMessage(new KeysViewModel());
-            WeakReferenceMessenger.Default.Send(message);
+            _ = WeakReferenceMessenger.Default.Send(message);
         }
         catch (SgLockException ex)
         {

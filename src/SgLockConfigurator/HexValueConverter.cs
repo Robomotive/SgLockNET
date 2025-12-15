@@ -7,7 +7,7 @@ namespace SgLockConfigurator;
 /// Provides a type converter to convert hex <see cref="string"/> objects to and from number types.
 /// </summary>
 [ValueConversion(typeof(string), typeof(uint))]
-internal class HexValueConverter : IValueConverter
+internal sealed class HexValueConverter : IValueConverter
 {
     /// <inheritdoc/>
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

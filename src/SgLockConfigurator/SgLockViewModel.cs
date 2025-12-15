@@ -10,7 +10,7 @@ namespace SgLockConfigurator;
 /// The view model for a single lock.
 /// </summary>
 /// <param name="sgLock">The lock to view.</param>
-public partial class SgLockViewModel(SgLock sgLock) : ObservableObject
+public sealed partial class SgLockViewModel(SgLock sgLock) : ObservableObject
 {
     [ObservableProperty]
     private uint counterIndex;
@@ -46,41 +46,41 @@ public partial class SgLockViewModel(SgLock sgLock) : ObservableObject
     [RelayCommand]
     private async Task DecryptDataAsync()
     {
-        Dispatcher.CurrentDispatcher.Invoke(DecryptedData.Clear);
+        await Dispatcher.CurrentDispatcher.InvokeAsync(DecryptedData.Clear);
         var data = EncryptedData.Select(x => x.Data).ToArray();
         var decryptedData = await sgLock.EncryptDataAsync(data, EncryptionKeyIndex).ConfigureAwait(true);
         var entries = decryptedData.Select((item, index) => new LockDataEntry((uint)index, item)).ToArray();
-        Dispatcher.CurrentDispatcher.Invoke(() => DecryptedData.AddMany(entries));
+        await Dispatcher.CurrentDispatcher.InvokeAsync(() => DecryptedData.AddMany(entries));
     }
 
     [RelayCommand]
     private async Task EncryptDataAsync()
     {
-        Dispatcher.CurrentDispatcher.Invoke(EncryptedData.Clear);
+        await Dispatcher.CurrentDispatcher.InvokeAsync(EncryptedData.Clear);
         var data = DecryptedData.Select(x => x.Data).ToArray();
         var encryptedData = await sgLock.EncryptDataAsync(data, EncryptionKeyIndex).ConfigureAwait(true);
         var entries = encryptedData.Select((item, index) => new LockDataEntry((uint)index, item)).ToArray();
-        Dispatcher.CurrentDispatcher.Invoke(() => EncryptedData.AddMany(entries));
+        await Dispatcher.CurrentDispatcher.InvokeAsync(() => EncryptedData.AddMany(entries));
     }
 
     [RelayCommand]
     private async Task ReadAllDataAsync()
     {
-        Dispatcher.CurrentDispatcher.Invoke(Data.Clear);
+        await Dispatcher.CurrentDispatcher.InvokeAsync(Data.Clear);
         var readData = await sgLock.ReadAllDataAsync().ConfigureAwait(true);
         var entries = readData.Select((item, index) => new LockDataEntry((uint)index, item)).ToArray();
-        Dispatcher.CurrentDispatcher.Invoke(() => Data.AddMany(entries));
+        await Dispatcher.CurrentDispatcher.InvokeAsync(() => Data.AddMany(entries));
     }
 
     [RelayCommand]
     private async Task ReadCountersAsync()
     {
-        Dispatcher.CurrentDispatcher.Invoke(Counters.Clear);
+        await Dispatcher.CurrentDispatcher.InvokeAsync(Counters.Clear);
         for (var i = 0u; i < sgLock.ConfigData.CounterCount; i++)
         {
             var counterValue = await sgLock.ReadCounterAsync(i).ConfigureAwait(true);
             var entry = new LockDataEntry(i, counterValue);
-            Dispatcher.CurrentDispatcher.Invoke(() => Counters.Add(entry));
+            await Dispatcher.CurrentDispatcher.InvokeAsync(() => Counters.Add(entry));
         }
     }
 

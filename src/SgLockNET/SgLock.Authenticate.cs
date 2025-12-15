@@ -1,7 +1,7 @@
 namespace SgLockNET;
 
 /// <content>The authentication part of the lock.</content>
-public partial class SgLock
+public sealed partial class SgLock
 {
     /// <summary>
     /// Authenticate with the key.
