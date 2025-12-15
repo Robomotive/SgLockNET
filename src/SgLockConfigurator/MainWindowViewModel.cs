@@ -6,7 +6,7 @@ namespace SgLockConfigurator;
 /// <summary>
 /// The view model for the main window.
 /// </summary>
-internal partial class MainWindowViewModel
+internal sealed partial class MainWindowViewModel
     : ObservableRecipient,
     IRecipient<NavigateToMessage>
 {
